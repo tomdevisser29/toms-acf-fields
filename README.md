@@ -2,6 +2,8 @@
 
 This plug-in adds some extra ACF Field Types that are not available in the base plug-in.
 
+<img width="693" alt="Screenshot 2024-10-12 at 19 06 40" src="https://github.com/user-attachments/assets/888e8691-13fc-4ff6-b903-77a967d4db13">
+
 ## Website URL
 
 This field will automatically strip the web protocol entered (e.g. "http") and set it to "https" when you save the post, so it's always using a secure protocol.
