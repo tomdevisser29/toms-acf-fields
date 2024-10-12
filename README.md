@@ -8,11 +8,13 @@ This field will automatically strip the web protocol entered (e.g. "http") and s
 
 It's also styled in a way that shows the "https://" prepend before the input.
 
-<img width="583" alt="website-url-field" src="https://github.com/user-attachments/assets/11097969-5d62-474e-b14d-783f8651ed85">
+<img width="575" alt="Screenshot 2024-10-12 at 19 04 35" src="https://github.com/user-attachments/assets/6b4af612-9ba9-47f9-bbba-4afe3945094a">
 
 ## Phone Number
 
 This field will automatically strip the entered phone number down to only digits. It will then create formatted phone numbers for display, links (compatible with `tel:`), and save the country code, country prefix and originally entered value.
+
+<img width="575" alt="Screenshot 2024-10-12 at 19 04 45" src="https://github.com/user-attachments/assets/ed48c6e3-31d5-4700-b65b-03402be70a96">
 
 ```
 array(6) {
