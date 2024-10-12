@@ -1,0 +1,29 @@
+.acf-field-website-url {
+    .input-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .input-group span {
+        align-items: center;
+        background-color: #eee;
+        box-sizing: border-box;
+        border: 1px solid #8c8f94;
+        border-right: 0;
+        border-radius: 4px 0 0 4px;
+        color: rgb(44, 51, 56);
+        display: flex;
+        min-height: 40px;
+        padding-inline: 0.75rem;
+
+        @media screen and (min-width: 783px) {
+            min-height: 30px;
+            padding-inline: 0.75rem;
+        }
+    }
+
+    .input-group input {
+        flex: 1;
+        border-radius: 0 4px 4px 0;
+    }
+}
