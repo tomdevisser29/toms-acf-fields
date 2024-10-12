@@ -44,6 +44,8 @@ class toms_acf_field_website_url extends \acf_field {
             'version' => TAF_VERSION,
         );
 
+        add_filter('acf/update_value/type=website_url', array($this, 'remove_url_protocol'), 10, 1);
+
         parent::__construct();
     }
 
@@ -53,6 +55,19 @@ class toms_acf_field_website_url extends \acf_field {
      * @return void
      */
     public function render_field_settings($field) {
+    }
+
+    /**
+     * Removes the URL protocol.
+     * @param string $value
+     * @return string
+     */
+    public function remove_url_protocol($value) {
+        if (is_string($value)) {
+            $value = str_replace('https://', '',  $value);
+            $value = str_replace('http://', '',  $value);
+        }
+        return $value;
     }
 
     /**

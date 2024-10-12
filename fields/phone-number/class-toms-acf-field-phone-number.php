@@ -44,7 +44,7 @@ class toms_acf_field_phone_number extends \acf_field {
             'version' => TAF_VERSION,
         );
 
-        add_filter('acf/validate_value/name=phone_number', array($this, 'validate_value'), 10, 4);
+        add_filter('acf/validate_value/type=phone_number', array($this, 'validate_value'), 10, 4);
 
         parent::__construct();
     }
@@ -164,6 +164,10 @@ class toms_acf_field_phone_number extends \acf_field {
             $valid_lengths = (array) $digit_lengths[$country];
 
             if (!in_array(strlen($number), $valid_lengths)) {
+                if (1 !== $field['required'] && 0 === strlen($number)) {
+                    return $valid;
+                }
+
                 $valid = __('The phone number you entered has an invalid length.', 'toms');
             }
         }
