@@ -13,7 +13,7 @@
         border-radius: 4px 0 0 4px;
         color: rgb(44, 51, 56);
         display: inline-block;
-        padding-right: 1.5rem !important;
+        padding-inline: 0.75rem 1.5rem !important;
         min-height: 40px;
         width: auto;
 
