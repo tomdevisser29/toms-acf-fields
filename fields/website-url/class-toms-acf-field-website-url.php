@@ -45,6 +45,7 @@ class toms_acf_field_website_url extends \acf_field {
         );
 
         add_filter('acf/update_value/type=website_url', array($this, 'remove_url_protocol'), 10, 1);
+        add_filter('acf/format_value/type=website_url', array($this, 'add_url_protocol'), 10, 1);
 
         parent::__construct();
     }
@@ -66,6 +67,18 @@ class toms_acf_field_website_url extends \acf_field {
         if (is_string($value)) {
             $value = str_replace('https://', '',  $value);
             $value = str_replace('http://', '',  $value);
+        }
+        return $value;
+    }
+
+    /**
+     * Removes the URL protocol.
+     * @param string $value
+     * @return string
+     */
+    public function add_url_protocol($value) {
+        if (is_string($value)) {
+            $value = 'https://' . $value;
         }
         return $value;
     }
