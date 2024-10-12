@@ -18,3 +18,4 @@ if (! function_exists('acf_register_field_type')) {
 }
 
 require_once FIELDS_DIR . '/website-url/init.php';
+require_once FIELDS_DIR . '/phone-number/init.php';
