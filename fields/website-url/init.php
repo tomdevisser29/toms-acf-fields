@@ -1,9 +1,19 @@
 <?php
+/**
+ * Initializes the custom website url field.
+ *
+ * @package dev5
+ */
 
-defined('ABSPATH') or die;
+defined( 'ABSPATH' ) || die;
 
-add_action('init', 'toms_register_website_url_field_type');
-function toms_register_website_url_field_type() {
-    require_once FIELDS_DIR . '/website-url/class-toms-acf-field-website-url.php';
-    acf_register_field_type('toms_acf_field_website_url');
+/**
+ * Register the ACF field type.
+ *
+ * @return void
+ */
+function dev5_register_website_url_field_type() {
+	require_once DEV5_FIELDS_DIR . '/website-url/class-dev5-acf-field-website-url.php';
+	acf_register_field_type( 'Dev5_Acf_Field_Website_Url' );
 }
+add_action( 'init', 'dev5_register_website_url_field_type' );

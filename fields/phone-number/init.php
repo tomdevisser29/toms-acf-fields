@@ -1,9 +1,19 @@
 <?php
+/**
+ * Initializes the custom phone number field.
+ *
+ * @package dev5
+ */
 
-defined('ABSPATH') or die;
+defined( 'ABSPATH' ) || die;
 
-add_action('init', 'toms_register_phone_number_field_type');
-function toms_register_phone_number_field_type() {
-    require_once FIELDS_DIR . '/phone-number/class-toms-acf-field-phone-number.php';
-    acf_register_field_type('toms_acf_field_phone_number');
+/**
+ * Register the ACF field type.
+ *
+ * @return void
+ */
+function dev5_register_phone_number_field_type(): void {
+	require_once DEV5_FIELDS_DIR . '/phone-number/class-dev5-acf-field-phone-number.php';
+	acf_register_field_type( 'Dev5_Acf_Field_Phone_Number' );
 }
+add_action( 'init', 'dev5_register_phone_number_field_type' );
